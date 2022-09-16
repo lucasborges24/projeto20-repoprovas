@@ -81,3 +81,9 @@ export const getEmailThatExists = async (email: string) => {
   if (!user) throw unauthorizedError("invalid data!");
   return user;
 };
+
+export const getUserById = async (id: number) => {
+  const user = await authRepository.getUserById(id);
+  if (!user) throw unauthorizedError("Invalid token!");
+  return user;
+};
