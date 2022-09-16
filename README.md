@@ -1,4 +1,4 @@
-d<p align="center">
+<p align="center">
   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipground.com%2Fimages%2Fexam-icon-png-7.png&f=1&nofb=1" alt="logo" width="300px"/>
 </p>
 <h1 align="center">RepoProvas API</h1>
@@ -15,7 +15,7 @@ d<p align="center">
 
 ## General Info
 
-RepoProvas is an API for sharing exams between students..
+RepoProvas is an API for sharing exams between students. You can do authentication (signin/signup)
  <!-- You can *store*, *acess* and *delete* four types of passwords:
  
 &rarr; website **credentials**; -->
