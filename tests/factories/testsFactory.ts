@@ -1,11 +1,7 @@
 import { faker } from "@faker-js/faker";
-import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
 import { signUpFactory } from "./authFactory";
 import supertest from "supertest";
 import app from "../../src/app";
-
-dotenv.config();
 
 interface testData {
   name: string;
