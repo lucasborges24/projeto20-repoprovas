@@ -392,3 +392,14 @@ The Database was created using the following schema:
 <img src="src/assets/database.png" alt="database ilustration">
 
 To create it, it was used **Postgres** and **Prisma**.
+
+## Author
+
+[![gitHub](https://img.shields.io/badge/-GitHub-181717?logo=gitHub&logoColor=white&style=for-the-badge)](https://github.com/lucasborges24)
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![AGPL License](https://img.shields.io/badge/-Instagram-E4405F?logo=instagram&logoColor=white&style=for-the-badge)](https://www.instagram.com/lucas__fisica/)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=blue
+[linkedin-url]: https://www.linkedin.com/in/lucas-b-barbosa-12a157216/
