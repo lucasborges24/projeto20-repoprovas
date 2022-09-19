@@ -11,4 +11,8 @@ testRouter.post(
   testController.postTest
 );
 
+testRouter.get("/test/discipline", testController.getTestByDiscipline);
+
+testRouter.get("/test/teacher", testController.getTestByTeacher);
+
 export default testRouter;
