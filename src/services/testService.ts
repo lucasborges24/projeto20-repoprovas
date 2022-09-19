@@ -3,7 +3,7 @@ import { testRepository } from "../repositories";
 import { CreateTestsData, TestsBody } from "../types/testTypes";
 import { notFoundError } from "../utils/errorUtils";
 
-export const postTest = async (body: TestsBody, user: Users) => {
+export const postTest = async (body: TestsBody) => {
   const { id: categoryId } = await getCategoryByName(body.category);
   const { id: teacherDisciplineId } =
     await getTeacherDisciplineByTeacherAndDisciplineName(
