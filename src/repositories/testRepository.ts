@@ -47,3 +47,61 @@ export const findDisciplineByName = async (disciplineName: string) => {
   });
   return discipline;
 };
+
+export const getTestByDiscipline = async () => {
+  const tests = prisma.terms.findMany({
+    include: {
+      Disciplines: {
+        select: {
+          id: true,
+          name: true,
+          TeachersDisciplines: {
+            distinct: ["teacherId"],
+            select: {
+              teacher: {
+                select: { id: true, name: true },
+              },
+              Tests: {
+                // distinct: ["categoryId"],
+                select: {
+                  id: true,
+                  name: true,
+                  pdfUrl: true,
+                  category: true,
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    orderBy: {
+      id: "asc",
+    },
+  });
+  return tests;
+};
+
+export const getTestsByTeacher = async () => {
+  const tests = await prisma.teachers.findMany({
+    include: {
+      TeachersDisciplines: {
+        distinct: ["disciplineId"],
+        select: {
+          discipline: {
+            select: { id: true, name: true },
+          },
+          Tests: {
+            select: {
+              id: true,
+              name: true,
+              pdfUrl: true,
+              category: true,
+            },
+          },
+        },
+      },
+    },
+  });
+  return tests;
+};

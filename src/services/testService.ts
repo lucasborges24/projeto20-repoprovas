@@ -20,6 +20,16 @@ export const postTest = async (body: TestsBody, user: Users) => {
   return newTest;
 };
 
+export const getTestByDiscipline = async () => {
+  const tests = await testRepository.getTestByDiscipline();
+  return tests;
+};
+
+export const getTestByTeacher = async () => {
+  const tests = await testRepository.getTestsByTeacher();
+  return tests;
+};
+
 export const getTeacherDisciplineByTeacherAndDisciplineName = async (
   teacherName: string,
   disciplineName: string
